@@ -5,90 +5,145 @@ import { projects } from "@/data/projects";
 import { GitBranch, ExternalLink } from "lucide-react";
 
 export default function Projects() {
+  const featured = projects.filter((p) => p.status === "completed");
+  const inProgress = projects.filter((p) => p.status === "in-progress");
+
   return (
-    <section id="projects" className="py-24">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
-        <p className="text-accent text-sm font-mono mb-2 tracking-widest uppercase">
+    <>
+      {/* Section label spanning full width */}
+      <div style={{ gridColumn: "1 / 4", paddingTop: "8px" }}>
+        <p style={{ fontSize: "10px", color: "#22d3ee", fontFamily: "monospace", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "2px" }}>
           03. Projects
         </p>
-        <h2 className="text-3xl font-bold text-white mb-10">What I've Built</h2>
+        <h2 style={{ fontSize: "20px", fontWeight: 700, color: "#fff" }}>
+          What I've Built
+        </h2>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map((project, i) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="bg-surface border border-surface-border rounded-lg p-6 flex flex-col justify-between hover:border-accent/40 transition-colors duration-300"
+      {/* Featured projects — each takes 1 column */}
+      {featured.map((project, i) => (
+        <motion.div
+          key={project.title}
+          id={i === 0 ? "projects" : undefined}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: i * 0.1 }}
+          style={{
+            background: "#111",
+            border: "0.5px solid #222",
+            borderRadius: "12px",
+            padding: "20px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            transition: "border-color 0.3s",
+            cursor: "default",
+          }}
+          onMouseEnter={e => (e.currentTarget.style.borderColor = "rgba(34,211,238,0.35)")}
+          onMouseLeave={e => (e.currentTarget.style.borderColor = "#222")}
+        >
+          <div>
+            <p style={{ fontSize: "10px", color: "#4b5563", fontFamily: "monospace", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>
+              Completed
+            </p>
+            <h3 style={{ fontSize: "14px", fontWeight: 600, color: "#fff", marginBottom: "8px", lineHeight: 1.4 }}>
+              {project.title}
+            </h3>
+            <p style={{ fontSize: "12px", color: "#6b7280", lineHeight: 1.6, marginBottom: "12px" }}>
+              {project.description}
+            </p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "5px", marginBottom: "14px" }}>
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  style={{
+                    fontSize: "10px",
+                    padding: "2px 8px",
+                    borderRadius: "4px",
+                    background: "#1a1a1a",
+                    border: "0.5px solid #2a2a2a",
+                    color: "#9ca3af",
+                    fontFamily: "monospace",
+                  }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "12px", color: "#6b7280", textDecoration: "none", transition: "color 0.2s" }}
+              onMouseEnter={e => (e.currentTarget.style.color = "#22d3ee")}
+              onMouseLeave={e => (e.currentTarget.style.color = "#6b7280")}
             >
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-white font-semibold text-lg">
-                    {project.title}
-                  </h3>
-                  {project.status === "in-progress" && (
-                    <span className="text-xs text-accent border border-accent/30 px-2 py-0.5 rounded-full">
-                      In Progress
-                    </span>
-                  )}
-                </div>
+              <GitBranch size={14} />
+              View on GitHub
+            </a>
+          )}
+        </motion.div>
+      ))}
 
-                <p className="text-muted text-sm leading-relaxed mb-4">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs text-accent/80 bg-accent/10 px-2 py-0.5 rounded"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-muted hover:text-white text-sm transition-colors duration-200"
+      {/* In-progress projects — span full width together */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+        style={{
+          gridColumn: "1 / 4",
+          background: "#111",
+          border: "0.5px solid #222",
+          borderRadius: "12px",
+          padding: "20px",
+        }}
+      >
+        <p style={{ fontSize: "10px", color: "#22d3ee", fontFamily: "monospace", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "14px" }}>
+          In Progress
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+          {inProgress.map((project) => (
+            <div
+              key={project.title}
+              style={{
+                padding: "14px",
+                background: "#0f0f0f",
+                border: "0.5px solid #1a1a1a",
+                borderRadius: "8px",
+              }}
+            >
+              <h3 style={{ fontSize: "13px", fontWeight: 600, color: "#fff", marginBottom: "6px" }}>
+                {project.title}
+              </h3>
+              <p style={{ fontSize: "11px", color: "#6b7280", lineHeight: 1.6, marginBottom: "10px" }}>
+                {project.description}
+              </p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "4px" }}>
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    style={{
+                      fontSize: "10px",
+                      padding: "2px 8px",
+                      borderRadius: "4px",
+                      background: "rgba(34,211,238,0.05)",
+                      border: "0.5px solid rgba(34,211,238,0.15)",
+                      color: "#22d3ee",
+                      fontFamily: "monospace",
+                    }}
                   >
-                    <GitBranch size={16} />
-                    GitHub
-                  </a>
-                )}
-                {project.demo && (
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-muted hover:text-white text-sm transition-colors duration-200"
-                  >
-                    <ExternalLink size={16} />
-                    Live Demo
-                  </a>
-                )}
-                {!project.github && project.status === "in-progress" && (
-                  <span className="text-xs text-muted">
-                    Repo coming soon
+                    {tag}
                   </span>
-                )}
+                ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </motion.div>
-    </section>
+    </>
   );
 }

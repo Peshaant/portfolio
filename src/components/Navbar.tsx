@@ -18,33 +18,40 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navClass = scrolled
-    ? "bg-[#0a0a0a]/80 backdrop-blur-md border-b border-[#222222]"
-    : "bg-transparent";
-
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navClass}`}>
-      <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a
-          href="#"
-          className="text-white font-semibold text-lg tracking-tight hover:text-accent transition-colors duration-200"
-        >
-          harsh<span className="text-accent">.</span>
-        </a>
-
-        <ul className="flex items-center gap-8">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-sm text-muted hover:text-white transition-colors duration-200"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <nav
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "10px 20px",
+        borderRadius: "12px",
+        border: "0.5px solid #222",
+        background: scrolled ? "rgba(17,17,17,0.95)" : "#111",
+        backdropFilter: scrolled ? "blur(12px)" : "none",
+        position: "sticky",
+        top: "10px",
+        zIndex: 50,
+        transition: "all 0.3s",
+      }}
+    >
+      <a href="#" style={{ color: "#fff", fontWeight: 600, fontSize: "15px", textDecoration: "none" }}>
+        harsh<span style={{ color: "#22d3ee" }}>.</span>
+      </a>
+      <ul style={{ display: "flex", gap: "20px", listStyle: "none", margin: 0, padding: 0 }}>
+        {navLinks.map((link) => (
+          <li key={link.href}>
+            <a
+              href={link.href}
+              style={{ color: "#6b7280", fontSize: "13px", textDecoration: "none", transition: "color 0.2s" }}
+              onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
+              onMouseLeave={e => (e.currentTarget.style.color = "#6b7280")}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 }

@@ -14,9 +14,6 @@ const config: Config = {
         "surface-border": "#222222",
         muted: "#6b7280",
       },
-      fontFamily: {
-        sans: ["Inter", "sans-serif"],
-      },
     },
   },
   plugins: [],
