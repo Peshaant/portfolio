@@ -32,7 +32,7 @@ export default function About() {
       <p style={{ fontSize: "12px", color: "#6b7280", lineHeight: 1.7, marginBottom: "10px" }}>
         I've built AI-verification pipelines, breach-intelligence and
         document-verification systems, and end-to-end ML pipelines. Top-20
-        finisher at the AI for Society Hackathon (APU).
+        finisher at the AI for Society Hackathon 2026 (APU).
       </p>
       <p style={{ fontSize: "12px", color: "#6b7280", lineHeight: 1.7 }}>
         I pick up new stacks quickly, work well under code review, and speak

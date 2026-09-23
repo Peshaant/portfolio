@@ -14,13 +14,12 @@ export const projects: Project[] = [
       "Averis × Monash Hackathon 2026. Built end-to-end: reads a shipping inbox and cross-checks draft Bills of Lading against Shipping Instructions across 7 fields, using a match / mismatch / uncertain verdict pipeline that escalates anything it can't verify. 100% rule-tier agreement across 520 synthetic emails and 3,213 stress-test edits.",
     tags: ["Python", "Flask", "SQLite", "Docker", "OCR"],
     github: "https://github.com/hayyaan123/Shipping-Desk",
-    demo: "https://shipping-doc-verifier.onrender.com",
     status: "completed",
   },
   {
     title: "LeakLens — AI-Verified Breach Intelligence",
     description:
-      "AI for Society Hackathon (APU), Top 20. Owned the data layer of a 4-person project that checks emails against breach databases and uses two independent AI models to cross-verify severity. Built a SHA-256-hashed TTL cache and enforced no-plaintext-storage of emails end to end.",
+      "AI for Society Hackathon 2026 (APU), Top 20. Owned the data layer of a 4-person project that checks emails against breach databases and uses two independent AI models to cross-verify severity. Built a SHA-256-hashed TTL cache and enforced no-plaintext-storage of emails end to end.",
     tags: ["Node.js", "Express", "Multi-model AI", "Privacy"],
     github: "https://github.com/AvProgramm/LeakLens",
     status: "completed",
