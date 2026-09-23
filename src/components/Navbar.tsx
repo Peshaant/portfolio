@@ -36,7 +36,7 @@ export default function Navbar() {
       }}
     >
       <a href="#" style={{ color: "#fff", fontWeight: 600, fontSize: "15px", textDecoration: "none" }}>
-        harsh<span style={{ color: "#22d3ee" }}>.</span>
+        peshaant<span style={{ color: "#22d3ee" }}>.</span>
       </a>
       <ul style={{ display: "flex", gap: "20px", listStyle: "none", margin: 0, padding: 0 }}>
         {navLinks.map((link) => (

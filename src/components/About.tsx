@@ -25,17 +25,18 @@ export default function About() {
         Who I Am
       </h2>
       <p style={{ fontSize: "12px", color: "#6b7280", lineHeight: 1.7, marginBottom: "10px" }}>
-        Second-year CS student at{" "}
+        Third-year CS student from Mauritius at{" "}
         <span style={{ color: "#e5e5e5" }}>Monash University Malaysia</span>,
-        with a strong interest in AI, machine learning, and cybersecurity.
+        with a particular interest in cybersecurity, data science, and AI.
       </p>
       <p style={{ fontSize: "12px", color: "#6b7280", lineHeight: 1.7, marginBottom: "10px" }}>
-        I've worked across the full ML pipeline — EDA, preprocessing, model
-        training and evaluation.
+        I've built AI-verification pipelines, breach-intelligence and
+        document-verification systems, and end-to-end ML pipelines. Top-20
+        finisher at the AI for Society Hackathon (APU).
       </p>
       <p style={{ fontSize: "12px", color: "#6b7280", lineHeight: 1.7 }}>
-        Also experienced in database design, functional programming in Haskell,
-        and low-level hardware projects.
+        I pick up new stacks quickly, work well under code review, and speak
+        English and French fluently.
       </p>
     </motion.div>
   );

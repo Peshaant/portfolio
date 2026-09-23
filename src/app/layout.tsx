@@ -5,9 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Peshaant | CS Student · AI & Cybersecurity",
+  title: "Peshaant Gunness | CS Student · Cybersecurity & AI",
   description:
-    "Portfolio of Peshaant — CS student at Monash University Malaysia, focused on AI and data science.",
+    "Portfolio of Peshaant Gunness — CS student at Monash University Malaysia, focused on cybersecurity, data science, and AI.",
 };
 
 export default function RootLayout({

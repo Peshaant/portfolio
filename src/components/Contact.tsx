@@ -27,22 +27,22 @@ export default function Contact() {
         Get In Touch
       </h2>
       <p style={{ fontSize: "13px", color: "#6b7280", lineHeight: 1.7, marginBottom: "24px", maxWidth: "420px", margin: "0 auto 24px" }}>
-        Open to internship opportunities in AI, data science, and cybersecurity.
+        Seeking a 12-week internship (Nov 2026 – Feb 2027) in cybersecurity, data science, or AI.
         My inbox is always open.
       </p>
 
       <div style={{ display: "flex", justifyContent: "center", gap: "24px", marginBottom: "24px", flexWrap: "wrap" }}>
         <a
-          href="mailto:youremail@gmail.com"
+          href="mailto:gunnesspeshaant@gmail.com"
           style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "13px", color: "#6b7280", textDecoration: "none", transition: "color 0.2s" }}
           onMouseEnter={e => (e.currentTarget.style.color = "#22d3ee")}
           onMouseLeave={e => (e.currentTarget.style.color = "#6b7280")}
         >
           <Mail size={15} />
-          youremail@gmail.com
+          gunnesspeshaant@gmail.com
         </a>
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/Peshaant"
           target="_blank"
           rel="noopener noreferrer"
           style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "13px", color: "#6b7280", textDecoration: "none", transition: "color 0.2s" }}
@@ -50,10 +50,10 @@ export default function Contact() {
           onMouseLeave={e => (e.currentTarget.style.color = "#6b7280")}
         >
           <GitBranch size={15} />
-          github.com/yourusername
+          github.com/Peshaant
         </a>
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="https://linkedin.com/in/peshaant-gunness-941236333"
           target="_blank"
           rel="noopener noreferrer"
           style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "13px", color: "#6b7280", textDecoration: "none", transition: "color 0.2s" }}
@@ -61,12 +61,12 @@ export default function Contact() {
           onMouseLeave={e => (e.currentTarget.style.color = "#6b7280")}
         >
           <span style={{ fontWeight: 700, fontSize: "14px" }}>in</span>
-          linkedin.com/in/yourusername
+          linkedin.com/in/peshaant-gunness-941236333
         </a>
       </div>
 
       <a
-        href="mailto:youremail@gmail.com"
+        href="mailto:gunnesspeshaant@gmail.com"
         style={{ display: "inline-block", background: "#22d3ee", color: "#000", fontSize: "12px", fontWeight: 600, padding: "10px 24px", borderRadius: "7px", textDecoration: "none", transition: "background 0.2s" }}
         onMouseEnter={e => (e.currentTarget.style.background = "#67e8f9")}
         onMouseLeave={e => (e.currentTarget.style.background = "#22d3ee")}

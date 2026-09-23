@@ -22,14 +22,15 @@ export default function Hero() {
           CS Student · AI & Cybersecurity
         </p>
         <h1 style={{ fontSize: "36px", fontWeight: 700, color: "#fff", lineHeight: 1.1, marginBottom: "8px" }}>
-          Hey, I'm Harsh.
+          Hey, I'm Peshaant.
         </h1>
         <p style={{ fontSize: "20px", fontWeight: 600, color: "#4b5563", marginBottom: "12px" }}>
           I build things with data & code.
         </p>
         <p style={{ fontSize: "13px", color: "#6b7280", lineHeight: 1.7, marginBottom: "20px", maxWidth: "480px" }}>
-          Second-year CS student at Monash University Malaysia, focused on AI,
-          machine learning, and cybersecurity. Currently looking for internship opportunities.
+          Third-year CS student at Monash University Malaysia, focused on
+          cybersecurity, data science, and AI. Seeking a 12-week internship
+          from Nov 2026 to Feb 2027.
         </p>
         <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
           <a
@@ -75,15 +76,18 @@ export default function Hero() {
             <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#22d3ee", display: "inline-block" }} />
             <span style={{ color: "#e5e5e5", fontSize: "13px", fontWeight: 500 }}>Open to Internships</span>
           </div>
+          <p style={{ fontSize: "12px", color: "#6b7280", marginBottom: "4px" }}>
+            Cybersecurity · Data Science · AI
+          </p>
           <p style={{ fontSize: "12px", color: "#6b7280", marginBottom: "20px" }}>
-            AI · Data Science · Cybersecurity
+            Nov 2026 – Feb 2027
           </p>
           <div style={{ height: "0.5px", background: "#222", marginBottom: "20px" }} />
           <p style={{ fontSize: "10px", color: "#22d3ee", fontFamily: "monospace", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "10px" }}>
             Based In
           </p>
-          <p style={{ fontSize: "13px", color: "#e5e5e5" }}>Kuala Lumpur, Malaysia</p>
-          <p style={{ fontSize: "12px", color: "#6b7280" }}>Monash University Malaysia</p>
+          <p style={{ fontSize: "13px", color: "#e5e5e5" }}>Sunway City, Malaysia</p>
+          <p style={{ fontSize: "12px", color: "#6b7280" }}>Monash University Malaysia · From Mauritius 🇲🇺</p>
         </div>
         <div
           style={{
@@ -94,9 +98,12 @@ export default function Hero() {
             borderRadius: "8px",
             fontSize: "12px",
             color: "#22d3ee",
+            lineHeight: 1.7,
           }}
         >
-          🏅 NVIDIA DLI Certified
+          🏅 AWS Certified AI Practitioner
+          <br />
+          🏅 NVIDIA DLI: Fundamentals of Deep Learning
         </div>
       </motion.div>
     </>

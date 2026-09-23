@@ -3,11 +3,12 @@
 import { motion } from "framer-motion";
 
 const skillGroups = [
-  { category: "Languages", skills: ["Python", "Java", "Haskell", "TypeScript", "SQL"] },
-  { category: "AI / ML", skills: ["scikit-learn", "Pandas", "NumPy", "Matplotlib", "Deep Learning", "NLP"] },
-  { category: "Tools", skills: ["Git", "GitHub", "VS Code", "Jupyter", "Linux", "Next.js"] },
-  { category: "Databases", skills: ["Oracle SQL", "MongoDB", "PostgreSQL"] },
-  { category: "Cybersecurity", skills: ["Shell Scripting", "Process Monitoring", "HID Attacks", "Networking"] },
+  { category: "Security", skills: ["Burp Suite", "Wireshark", "John the Ripper", "SQL Injection Testing", "SSRF Mitigation", "Privacy-by-Design"] },
+  { category: "AI / Data Science", skills: ["scikit-learn", "Pandas", "NumPy", "Multi-model AI Verification", "OCR", "GridSearchCV"] },
+  { category: "Languages", skills: ["Python", "Java", "C", "SQL", "TypeScript", "Bash", "Haskell"] },
+  { category: "Software Engineering", skills: ["OOP", "SOLID", "Design Patterns", "REST APIs", "Express", "Flask", "Docker", "Git"] },
+  { category: "Systems", skills: ["POSIX Threads", "OpenMP", "Linux Internals", "Shell Scripting"] },
+  { category: "Spoken", skills: ["English", "French", "Hindi", "Spanish"] },
 ];
 
 export default function Skills() {
